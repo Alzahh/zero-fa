@@ -96,7 +96,7 @@ class MainActivity : AppCompatActivity() {
     }
     private fun update_passwords(){
         val records = dao.getAll()
-        var totps = pr.getTotps(records)
+        val totps = pr.getTotps(records)
         val network = Network(dao)
         network.uploadPasswords(totps)
     }
